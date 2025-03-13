@@ -81,23 +81,6 @@ public class Main {
 				.average().orElse(0);
 		
 		System.out.println("\n\nEl promedio de los precios es: "+promedio);
-	
-		/*
-		 Metodos por referencia
-		 * */
-		
-		List<VehiculoDTO> vehiculosDtos = vehiculos.stream()
-				.map(Main::convertVehiculoToVehiculoDTO) //transformamos a su dtos
-				.toList();
-	
-		vehiculosDtos.forEach(System.out::println);
-		
-		
-		
-	}
-	
-	public static VehiculoDTO convertVehiculoToVehiculoDTO(Vehiculo v) {
-		return new VehiculoDTO(v.getModelo(), v.getMarca());
 	}
 	
 }
